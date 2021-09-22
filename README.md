@@ -7,4 +7,5 @@ Graham Walker: My name is Graham Walker. I am from Dallas, TX. I got into progra
 Plan of Action for a Merge Conflict Scenario:
 
 1: Push code to pull request
+
 2: If merge conflict occurs, then PM this weeks lead collaborator then have discussion using Github pull request comments. (Or slack or virtual meeting is necessary then add summary of that meeting in the pull request comments.)
