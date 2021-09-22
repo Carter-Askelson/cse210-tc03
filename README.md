@@ -1,1 +1,3 @@
 # cse210-tc03
+
+Carter Askelson: Hello everyone, my name is Carter Askelson.  I originally hail from Lake Stevens, Washington in the United States.  Ever since I got home from my Mission I've been incredibly passionate about Coding.  I used Cory Althoff's The Self-Taught Programmer to learn Python.  After a year of Coding I was able to release my first game on Itch.io using the Godot Engine.  I'm super excited to get into learning Classes and Object-Oriented Programming so I can level up my coding knowledge and help me make my 2nd game better than the last.
