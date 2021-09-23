@@ -4,6 +4,9 @@ Carter Askelson: Hello everyone, my name is Carter Askelson.  I originally hail 
 
 Graham Walker: My name is Graham Walker. I am from Dallas, TX. I got into programming when I was a financial analyst for 7-Eleven corporate and wanted to be able to automate tasks in excel. I learned a little VBA to help me accomplish what I wanted to do and I thought there has to be more powerful porgramming languages. After that I found Java and got hooked into the world of computer science. I got a new job as a Software Engineer about 3 years and have been loving it ever since. I am excited to learn Python and get refresher on Object-Oriented Programming.
 
+
+Alex Parker: My name is Alex Parker. I am from Pullman, Washington.  For the past year I have been living in Kansas, but I just moved to Rexburg for the Fall semester. I am in my 3rd semeter of my Electrical Engineering major. I have not been coding for super long, but I do enjoy programming. I am excited to overcome the challenges that this class will present.  
+
 Plan of Action for a Merge Conflict Scenario:
 
 1: Push code to pull request
