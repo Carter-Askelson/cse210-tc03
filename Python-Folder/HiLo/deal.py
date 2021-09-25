@@ -22,14 +22,13 @@ class Deal:
         # checks to see if there enough cards in the deck to play another round, then selects the next 2 cards
         if len(self.deck) < 2:
             self.shuffle_deck()
-            return None
-        else:
-            self.current_card = self.deck[-1]
-            self.deck.pop()
-            self.next_card = self.deck[-1]
-            self.deck.pop()
 
-            return self.get_card()
+        self.current_card = self.deck[-1]
+        self.deck.pop()
+        self.next_card = self.deck[-1]
+        self.deck.pop()
+
+        return self.get_card()
 
     def shuffle_deck(self):
         # This function is to shuffle the list of numbers 1-13. While playing the game each next_card will be pulled from the
@@ -39,7 +38,4 @@ class Deal:
             self.deck.append(i + 1)
         random.shuffle(self.deck)
 
-        if self.deal_card() == None:
-            return None
-        else:
-            return self.deal_card()
+        return self.deal_card()

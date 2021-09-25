@@ -50,7 +50,7 @@ class HiLo:
                 print()
         print(f"The 2nd card is: {next_card}")
         self.score_changer(player_choice, current_card, next_card)
-        if self.player_score == 0:
+        if self.get_score() == 0:
             print()
             print("Oops, you are out of points. Game over.")
             self.check_high_score()
@@ -74,8 +74,10 @@ class HiLo:
         # gives the player to ability to start a new round of HiLo or finish playing
         while True:
             restart = input("Would you like to play another round? (y/n): ")
-            restart = restart.lower()
-            print()
+            if restart is not None:
+                restart = restart.lower()
+                print()
+
             if restart == "y" or restart == "yes":
                 self.start_game()
             elif restart == "n" or restart == "no":
@@ -85,16 +87,28 @@ class HiLo:
                 print("Invalid Input.")
                 print()
 
+    def get_score(self):
+        return self.player_score
+
+    def set_score(self, new_score):
+        self.player_score = new_score
+
+    def get_high_score(self):
+        return self.high_score
+
+    def set_high_score(self, new_high_score):
+        self.high_score = new_high_score
+
     def check_high_score(self):
         # Determines whether last round had the new high score
         print()
-        print(f"You finished this round of HiLo with {self.player_score} points.")
+        print(f"You finished this round of HiLo with {self.get_score()} points.")
         print()
-        if self.high_score < self.player_score:
-            self.high_score = self.player_score
+        if self.get_high_score() < self.get_score():
+            self.set_high_score(self.get_score())
             print("Congratulations on getting the new High Score!")
             print()
-        print(f"The current High Score is {self.high_score} points.")
+        print(f"The current High Score is {self.get_high_score()} points.")
         print()
 
     def score_changer(self, player_choice, current_card, next_card):
@@ -104,17 +118,17 @@ class HiLo:
         if player_choice == "h" or player_choice == "H":
             if current_card < next_card:
                 print(win)
-                self.player_score += 100
+                self.set_score(self.player_score + 100)
             else:
                 print(lose)
-                self.player_score -= 75
+                self.set_score(self.player_score - 75)
         elif player_choice == "l" or player_choice == "L":
             if current_card > next_card:
                 print(win)
-                self.player_score += 100
+                self.set_score(self.player_score + 100)
             else:
                 print(lose)
-                self.player_score -= 75
+                self.set_score(self.player_score - 75)
         if self.player_score <= 0:
-            self.player_score = 0
+            self.set_score(0)
         print(f"Your score is: {self.player_score}")
