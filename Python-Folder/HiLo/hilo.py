@@ -17,7 +17,7 @@ class HiLo:
         shuffled_deck = self.deal.shuffle_deck()
 
         if shuffled_deck is not None:
-            self.player_interface(self.deal.current_card, self.deal.next_card)
+            self.player_interface(self.deal.get_card(), self.deal.get_next_card())
 
     def game_rules(self):
         print("Rules to HighLo: ")
@@ -34,7 +34,6 @@ class HiLo:
         print()
         print("Starting new game of HiLo")
         print()
-        self.deal.shuffle_deck()
 
     def player_interface(self, current_card, next_card):
         # runs the player input section of the program, (where the player actually plays the game)
